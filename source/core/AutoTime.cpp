@@ -59,7 +59,7 @@ uint64_t Timer::durationInUs() {
 }
 
 AutoTime::AutoTime(int line, const char* func) : Timer() {
-    mName = ::strdup(func);
+    mName = ::strdup(func); // string.h头文件函数, 函数功能: 复制函数名到新内存位置
     mLine = line;
 }
 AutoTime::~AutoTime() {
